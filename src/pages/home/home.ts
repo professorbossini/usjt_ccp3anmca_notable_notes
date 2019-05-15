@@ -11,7 +11,7 @@ export class HomePage {
   notes;
 
   constructor(public navCtrl: NavController, private noteService: NoteService) {
-    
+    this.notes = this.noteService.notes;
   }
   onItemClick (note){
     console.log ('item-click', note);
@@ -20,4 +20,7 @@ export class HomePage {
     });
   }
 
+  onAddClick (){
+    this.navCtrl.push('DetailPage');
+  }
 }

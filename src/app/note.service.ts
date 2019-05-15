@@ -19,4 +19,15 @@ export class NoteService{
             content: 'Importante para desenvolver com Ionic'
         }
     ];
+
+    removeNote (note){
+        let index = this.notes.indexOf(note);
+        if (index > -1){
+            this.notes.splice(index, 1);
+        }
+    }
+
+    addNote (note){
+        this.notes.push(note);
+    }
 }
